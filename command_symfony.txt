@@ -1,0 +1,35 @@
+// Installation symfony ou mise à jour
+scoop install symfony-cli
+
+// Config
+composer create-project symfony/skeleton nom_projet
+symfony composer require api-platform/api-pack
+symfony composer require api
+composer require jwt-auth
+
+// BdD (avec install de doctrine)
+composer require orm
+composer require --dev symfony/maker-bundle
+DANS .env, ENLEVER COMMENTAIRE DE LA LIGNE "DATABASE_URL="sqlite:///%kernel.project_dir%/var/data.db"
+COMMENTER LES AUTRES LIGNES COMMENCANT PAR "DATABASE_URL="
+symfony console doctrine:database:create
+symfony console make:entity
+
+// Migration après avoir ajouter une entity
+symfony console make:migration
+php bin/console doctrine:migrations:migrate
+php bin/console doctrine:migration:list
+
+// Optionnel
+symfony console make:registration-form
+
+// Vide le cache (après migration)
+bin/console cache:clear
+
+// EXE
+symfony server:start OU symfony serve
+
+// AUTRE
+bin/console make:user
+php bin/console make:user
+composer dump-env dev

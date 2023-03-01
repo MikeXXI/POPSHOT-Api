@@ -1,0 +1,26 @@
+* api-platform/core
+ * doctrine/annotations
+ * doctrine/doctrine-bundle
+ * doctrine/doctrine-migrations-bundle
+ * nelmio/cors-bundle
+ * phpunit/phpunit
+ * scheb/2fa-bundle
+ * symfony/console
+ * symfony/debug-bundle
+ * symfony/flex
+ * symfony/framework-bundle
+ * symfony/mailer
+ * symfony/maker-bundle
+ * symfony/messenger
+ * symfony/monolog-bundle
+ * symfony/notifier
+ * symfony/phpunit-bridge
+ * symfony/routing
+ * symfony/security-bundle
+ * symfony/translation
+ * symfony/twig-bundle
+ * symfony/validator
+ * symfony/web-profiler-bundle
+ * symfony/webapp-pack
+ * symfonycasts/verify-email-bundle
+ * twig/extra-bundle
